@@ -28,10 +28,10 @@ module PermanentRecords
   
   module Scopes
     def deleted
-      where("#{table_name}.deleted_at IS NOT NULL")
+      where("\"#{table_name}\".\"deleted_at\" IS NOT NULL")
     end
     def not_deleted
-      where("#{table_name}.deleted_at IS NULL")
+      where("\"#{table_name}\".\"deleted_at\" IS NULL")
     end
   end
   
